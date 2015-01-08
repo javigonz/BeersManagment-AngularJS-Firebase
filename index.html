@@ -1,0 +1,74 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/app/styles/main.css">
+
+  </head>
+  <body ng-app="beersManagmentApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Beers Managment</h3>
+      </div>
+
+      <div ng-view></div>
+
+      <div id="footer">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <footer>
+                <br>
+                <div class="row">
+                  <div class="span4">
+                    <img src="/app/images/angularShield.png" >
+                    Created by Javier Gonzalez
+                  </div>
+                  <div class="span4">
+                    Twitter: <a href="http://twitter.com/TermicaDesign">@TermicaDesign</a>
+                  </div>
+                  <div class="span4">
+                    Portfolio: <a href="http://www.termicadesign.com">www.termicadesign.com</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="/app/scripts/app.js"></script>
+        <script src="/app/scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
