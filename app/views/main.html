@@ -7,7 +7,7 @@
       <div class="input-group" >
         <span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
 
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" ng-model="search.name">
       </div>
     </div>
 
@@ -15,12 +15,21 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th>Beer</th>
+          <th>
+            <a href="" ng-click="orderByName('name')">Beer</a>
+            <span class="caret" style="cursor: pointer" ng-click="orderByName('-nombre')"></span>
+          </th>
           <th>Country</th>
           <th>Type</th>
           <th>Brewed</th>
         </tr>
         </thead>
+        <tr ng-repeat="beer in beers | orderBy:orderSelector | filter:search">
+          <td>{{beer.name | uppercase}}</td>
+          <td>{{beer.country}}</td>
+          <td>{{beer.type | lowercase}}</td>
+          <td>{{beer.brewed | FilterBrewed}}</td>
+        </tr>
       </table>
     </div>
 

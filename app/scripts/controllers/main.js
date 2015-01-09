@@ -9,6 +9,19 @@
  */
 angular
     .module('beersManagmentApp')
-    .controller('MainCtrl', function ($scope) {
+    .controller('MainCtrl', MainCtrl)
+    
 
-  });
+function MainCtrl($scope){
+
+	$scope.beers = BeersFactory(); //Factory fetch
+	
+
+	$scope.orderByName = function (order){
+
+		$scope.orderSelector = order;
+	} 
+
+};
+
+

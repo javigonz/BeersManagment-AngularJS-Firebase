@@ -4,7 +4,7 @@
 
   angular
       .module('beersManagmentApp', ['ngRoute' ,'ngResource'])
-      .config(config);
+      .config(config)
 
 
   function config ($locationProvider, $routeProvider) {
@@ -13,10 +13,12 @@
 
     $routeProvider
         .when('/', {
-          controller: '/controllers/main2',
+          controller: 'MainCtrl',
           templateUrl: '/app/views/main.html'
         });
 
   };
+
+
 
 
