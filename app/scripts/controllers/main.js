@@ -8,7 +8,7 @@
  * Controller of the beersManagmentApp
  */
 angular
-	.module('beersManagmentApp.controller', [])
+	.module('beersManagmentApp.controller', ['beersManagmentApp.services'])
     .controller('MainCtrl', MainCtrl)
     .controller('AddBeerCtrl', AddBeerCtrl);
     
@@ -16,6 +16,7 @@ angular
 function MainCtrl($scope){
 
 	$scope.beers = BeersFactory(); //Factory fetch
+	SetBeer($scope.beers);
 	
 
 	$scope.orderByName = function (order){
@@ -27,6 +28,13 @@ function MainCtrl($scope){
 
 function AddBeerCtrl($scope){
 
+
+	$scope.insertNewBeer = function()
+    {
+
+    	GetBeer().push($scope.newBeer);
+
+    }
 	
 
 };

@@ -1,52 +1,37 @@
-﻿<div class="customerOrders view">
-    <div class="container">
-        <header>
-            <h3>Add new Beer</h3>
-        </header>
-        <div>
-            <div class="jumbotron">
-                <div class="span12">
-                    <form class="form-horizontal">
-                      <div class="control-group">
-                        <label class="control-label" for="inputName">Name</label>
-                        <div class="controls">
-                          <input type="text" id="inputName" data-ng-model="newUser.name" required="true"  placeholder="Name">
-                        </div>
+﻿
+            <div class="panel panel-default">
+               <div class="panel-heading"> <span class=""> <i class="glyphicon glyphicon-thumbs-up"></i><a class="lead"> Add New Beer</a></span></div>
+                <div class="panel-body">
+                    <form>
+                      <div class="form-group">
+                        <label class="control-label" for="inputName">Beer Name</label>
+                        <input type="text" class="form-control" id="inputName" data-ng-model="newBeer.name" required="true"  placeholder="What´s Beer?">
                       </div>
-                      <div class="control-group">
-                        <label class="control-label" for="inputEmail">Email</label>
-                        <div class="controls">
-                          <input type="email" id="inputEmail" data-ng-model="newUser.email" required="true" placeholder="Email">
-                        </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputCountry">Country</label>
+                        <input type="text" class="form-control" id="inputEmail" data-ng-model="newBeer.country" required="true" placeholder="Country">
                       </div>
-                      <div class="control-group">
-                        <label class="control-label" for="inputPhone">Phone</label>
-                        <div class="controls">
-                          <input type="text" id="inputPhone" data-ng-model="newUser.phone" required="true"  placeholder="Phone">
-                        </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputType">Type</label>
+                        <input type="text" class="form-control" id="inputPhone" data-ng-model="newBeer.type" required="true"  placeholder="Type"> 
                       </div>
-                      <div class="control-group">
-                        <label class="control-label" for="inputCompany">Company</label>
-                        <div class="controls">
-                          <input type="text" id="inputCompany" data-ng-model="newUser.company" required="true"  placeholder="Company name">
-                        </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputBrewed">Brewed</label>
+                        <input type="text" class="form-control" id="inputCompany" data-ng-model="newBeer.brewed" required="true"  placeholder="Company name">
                       </div>
-                      <div class="control-group">
-                        <label class="control-label" for="inputWebsite">Website</label>
+
+                     </br>
+                      <div class="form-group">
                         <div class="controls">
-                          <input type="text" id="inputWebsite" data-ng-model="newUser.website" required="true"  placeholder="http://">
-                        </div>
-                      </div>
-                      <div class="control-group">
-                        <div class="controls">
-                          <button type="submit" class="btn btn-primary" data-ng-click="insertUser()">Add User</button>
+                          <button type="submit" class="btn btn-primary" data-ng-click="insertNewBeer()">Add New Beer</button>
                         </div>
                       </div>
                     </form>
                 </div>                
-                <br /><br />
+               
                
             </div>
-        </div>
-    </div>
-</div>
+

@@ -3,7 +3,9 @@
 
 angular
     .module('beersManagmentApp.services', [])
-    .factory('BeersFactory', BeersFactory);
+    .factory('BeersFactory', BeersFactory)
+    .factory('SetBeer', SetBeer)
+    .factory('GetBeer', GetBeer);
 
 function BeersFactory(){
 
@@ -33,4 +35,16 @@ function BeersFactory(){
                 name: 'Delirium Nocturne', country: 'Belgium', type: 'Blonde', brewed: 'Jhon & Sons'
               }
             ];
+  }
+
+  function SetBeer ($scope, beers){
+
+    $scope.beers = beers;
+
+  }
+
+  function GetBeer ($scope){
+
+    return $scope.beers;
+
   };
