@@ -11,7 +11,7 @@ describe ('Show Controllers works fine', function() {
 	    expect(scope.beers).not.toBe(null);
 	});
 
-	it('should call BeersFactory', function () {
+	it('should call orderByName', function () {
 	    expect(scope.orderByName).toBeDefined();
 	});
 

@@ -1,6 +1,6 @@
 describe ('Show Services works fine', function() {
 	
-	beforeEach(module('beersManagmentApp'));
+	beforeEach(module('beersManagmentApp.services'));
 
 	beforeEach(module(function ($provide) {
 	    $provide.value('BeersFactory', {

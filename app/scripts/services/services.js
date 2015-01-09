@@ -2,7 +2,7 @@
 
 
 angular
-    .module('beersManagmentApp',[])
+    .module('beersManagmentApp.services', [])
     .factory('BeersFactory', BeersFactory);
 
 function BeersFactory(){

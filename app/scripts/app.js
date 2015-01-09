@@ -3,7 +3,7 @@
 
 
   angular
-      .module('beersManagmentApp', ['ngRoute' ,'ngResource'])
+      .module('beersManagmentApp', ['ngRoute' ,'ngResource', 'beersManagmentApp.filters'])
       .config(config)
 
 
@@ -15,7 +15,12 @@
         .when('/', {
           controller: 'MainCtrl',
           templateUrl: '/app/views/main.html'
-        });
+        })
+        .when('/addBeer', {
+          controller: 'AddBeerCtrl',
+          templateUrl: '/app/views/addBeer.html'
+        })
+        .otherwise ({ redirectTo: '/'});
 
   };
 

@@ -1,6 +1,6 @@
 describe ('Show Filters works fine', function() {
 	
-	beforeEach(module('beersManagmentApp'));
+	beforeEach(module('beersManagmentApp.filters'));
 
 	var myFilter;
 

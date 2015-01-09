@@ -2,7 +2,7 @@
 
 
 angular
-    .module('beersManagmentApp',[])
+    .module('beersManagmentApp.filters', [])
     .filter('FilterBrewed', FilterBrewed);
 
 

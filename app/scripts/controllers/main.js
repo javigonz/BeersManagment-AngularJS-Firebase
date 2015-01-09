@@ -8,8 +8,9 @@
  * Controller of the beersManagmentApp
  */
 angular
-    .module('beersManagmentApp')
+	.module('beersManagmentApp.controller', [])
     .controller('MainCtrl', MainCtrl)
+    .controller('AddBeerCtrl', AddBeerCtrl);
     
 
 function MainCtrl($scope){
@@ -21,6 +22,12 @@ function MainCtrl($scope){
 
 		$scope.orderSelector = order;
 	} 
+
+}
+
+function AddBeerCtrl($scope){
+
+	
 
 };
 
