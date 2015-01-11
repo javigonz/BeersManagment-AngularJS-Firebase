@@ -18,10 +18,12 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'app/scripts/services/*.js',
-      'app/scripts/filters/*.js',
-      'app/scripts/controllers/*.js',
-      'test/*.spec.js'
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
+      'app/scripts/**/*.js',
+      'test/service.spec.js',
+      'test/filter.spec.js',
+      //'test/controller.spec.js'
     ],
 
 
@@ -66,6 +68,13 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
+
+    plugins : [
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-jasmine',
+      'karma-junit-reporter'
+    ],
 
 
     // Continuous Integration mode

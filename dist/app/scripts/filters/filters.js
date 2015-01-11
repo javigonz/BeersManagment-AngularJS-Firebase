@@ -1,0 +1,1 @@
+"use strict";function FilterBrewed(){return function(brewed){return"["+brewed+"]"}}angular.module("beersManagmentApp.filters",[]).filter("FilterBrewed",FilterBrewed);

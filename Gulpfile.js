@@ -79,7 +79,7 @@ gulp.task('copy', function() {
   gulp.src('./index.html')
     .pipe(gulp.dest('./dist')); 
 });
-
+/*
 // Delete css non used
 gulp.task('uncss', function() {
   gulp.src('./dist/app/content/css/flickrStyle.css')
@@ -87,7 +87,7 @@ gulp.task('uncss', function() {
       html: ['./index.html', '.app/partials/photos.html']
     }))
     .pipe(gulp.dest('./dist/app/content'));
-});
+});*/
 
 //////////////////////////////////////////////////////////////////////////////// UNIT TEST
 
@@ -101,7 +101,7 @@ gulp.task('test', function (done) {
 //////////////////////////////////////////////////////////////////////////////// TASK
 
 gulp.task('default', ['server','watch', 'jshint']);
-gulp.task('production', [ 'server-dist', 'compress', 'copy', 'uncss']);
+gulp.task('production', [ 'server-dist', 'compress', 'copy']);
 gulp.task('unitTest', ['test']);
 
 

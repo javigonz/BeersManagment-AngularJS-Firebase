@@ -1,6 +1,6 @@
 describe ('Show Controllers works fine', function() {
-	
-	beforeEach(inject(function ($controller, $rootScope) {
+
+	beforeEach(angular.mock.inject(function ($controller, $rootScope, $firebase) {
 	    scope = $rootScope.$new();
 	    $controller(MainCtrl, {
 	      $scope: scope
@@ -12,9 +12,17 @@ describe ('Show Controllers works fine', function() {
 	});
 
 	it('should call orderByName', function () {
+		//expect(scope.orderByName).toBeA('function');
 	    expect(scope.orderByName).toBeDefined();
+	});
+
+	it('should call removeBeer', function () {
+		expect(scope.removeBeer).toBeDefined();
 	});
 
 	
 });
+
+
+
 

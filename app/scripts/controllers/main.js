@@ -7,35 +7,44 @@
  * # MainCtrl
  * Controller of the beersManagmentApp
  */
+
 angular
-	.module('beersManagmentApp.controller', ['beersManagmentApp.services'])
+	.module('beersManagmentApp.controller', ['beersManagmentApp.services', 'firebase'])
     .controller('MainCtrl', MainCtrl)
-    .controller('AddBeerCtrl', AddBeerCtrl);
+	.controller('AddBeerCtrl', AddBeerCtrl);
     
 
-function MainCtrl($scope){
+function MainCtrl($scope, $firebase){
 
-	$scope.beers = BeersFactory(); //Factory fetch
-	SetBeer($scope.beers);
-	
+	$scope.beers = BeersFactory($firebase); //Factory fetch
 
+	//Filter to order colum by name
 	$scope.orderByName = function (order){
 
 		$scope.orderSelector = order;
-	} 
+	}
+
+	$scope.removeBeer = function (beer){
+
+		$scope.beers.$remove(beer);
+	}
+
+
 
 }
 
-function AddBeerCtrl($scope){
+function AddBeerCtrl($scope, $firebase, $location){
 
+	$scope.beers = BeersFactory($firebase); //Factory fetch
 
-	$scope.insertNewBeer = function()
-    {
+	//Method Insert New Beer
+	$scope.insertNewBeer = function(beer)
+	{
+		$scope.beers.$add(beer);
 
-    	GetBeer().push($scope.newBeer);
+		$location.url('/');
 
-    }
-	
+	}
 
 };
 

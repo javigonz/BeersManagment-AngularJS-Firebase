@@ -3,7 +3,7 @@
 
 
   angular
-      .module('beersManagmentApp', ['ngRoute' ,'ngResource', 'beersManagmentApp.filters'])
+      .module('beersManagmentApp', ['ngRoute' ,'ngResource', 'beersManagmentApp.filters', 'firebase'])
       .config(config)
 
 
