@@ -1,10 +1,15 @@
 describe ('Show Controllers works fine', function() {
 
-	beforeEach(angular.mock.inject(function ($controller, $rootScope, $firebase) {
+	beforeEach(module('beersManagmentApp.controller', 'firebase'));
+
+	var $firebase, scope, ctrl;
+
+	beforeEach(inject(function ($controller, $rootScope, _$firebase_) {
 	    scope = $rootScope.$new();
-	    $controller(MainCtrl, {
-	      $scope: scope
-	    });
+	    $firebase = _$firebase_;
+
+	    ctrl = $controller(MainCtrl, {$scope: scope});
+
 	  }));
 
 	it('should call BeersFactory', function () {
